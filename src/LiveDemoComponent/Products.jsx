@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { productboxes } from "./Product";
 import { FaPlay } from "react-icons/fa6";
 import { useProduct } from "./ProductProvider";
-import Model from "../UIModel/model";
+import Model from "../UIModel/Model";
 
 function Products() {
   const { dispatch } = useProduct();
