@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import SidebarData from "../Component/Sidebardata";
-import {IoMdMenu,IoMdClose,IoIosArrowDown,IoIosArrowUp,} from "react-icons/io";
-import {TiArrowSortedDown,TiSocialFacebook,TiSocialLinkedin,} from "react-icons/ti";
+import {
+  IoMdMenu,
+  IoMdClose,
+  IoIosArrowDown,
+  IoIosArrowUp,
+} from "react-icons/io";
+import {
+  TiArrowSortedDown,
+  TiSocialFacebook,
+  TiSocialLinkedin,
+} from "react-icons/ti";
 import "react-phone-input-2/lib/style.css";
 import { FaInstagram } from "react-icons/fa";
 
@@ -436,13 +445,7 @@ function Features() {
                           {sidebar && (
                             <span className="ml-0  font-bold font-Inter ">
                               {item.title === "Pricing" ? (
-                                <button
-                                  onClick={() => {
-                                    scrollToSection(0);
-                                  }}
-                                >
-                                  {item.title}
-                                </button>
+                                <button>{item.title}</button>
                               ) : (
                                 <>{item.title}</>
                               )}

@@ -3,10 +3,20 @@ import { useEffect, useState } from "react";
 import SidebarData from "../Component/Sidebardata";
 import { FaArrowLeft, FaArrowRight, FaInstagram } from "react-icons/fa";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import {TiSocialFacebook,TiSocialLinkedin,TiArrowSortedDown,} from "react-icons/ti";
-import {IoMdMenu,IoMdClose,IoIosArrowDown,IoIosArrowUp,} from "react-icons/io";
+import {
+  TiSocialFacebook,
+  TiSocialLinkedin,
+  TiArrowSortedDown,
+} from "react-icons/ti";
+import {
+  IoMdMenu,
+  IoMdClose,
+  IoIosArrowDown,
+  IoIosArrowUp,
+} from "react-icons/io";
 import "react-phone-input-2/lib/style.css";
 import { Outlet } from "react-router-dom";
+import { ul } from "framer-motion/client";
 
 // Documentation
 function Documentation() {
@@ -917,95 +927,109 @@ function Documentation() {
             {documentationRoutes.map((route, index) => (
               <li key={route.path}>
                 {index === 0 && (
-                  <li className="sm:text-[16px] mb-3 font-semibold font-inter">
-                    Getting Started
-                  </li>
+                  <ul>
+                    <li className="sm:text-[16px] mb-3 font-semibold font-inter">
+                      Getting Started
+                    </li>
+                  </ul>
                 )}
                 {index === 6 && (
-                  <li className="sm:text-base  mb-3 font-semibold font-inter">
-                    Installation
-                  </li>
+                  <ul>
+                    <li className="sm:text-base  mb-3 font-semibold font-inter">
+                      Installation
+                    </li>
+                  </ul>
                 )}
                 {index === 19 && (
-                  <li className="sm:text-base mb-3 font-semibold font-inter">
-                    Configuration
-                  </li>
+                  <ul>
+                    <li className="sm:text-base mb-3 font-semibold font-inter">
+                      Configuration
+                    </li>
+                  </ul>
                 )}
                 {index > 6 && index < 8 && (
-                  <li
-                    className="sm:text-base flex items-center justify-between  mb-3 cursor-pointer text-[#4e5554] font-inter"
-                    onClick={() => {
-                      setdropDown1(!dropDown1);
-                      setdropDown2(false);
-                      setdropDown3(false);
-                      setdropDown4(false);
-                    }}
-                  >
-                    How to setup locally
-                    {dropDown1 ? (
-                      <IoIosArrowDown className="w-6 h-6" />
-                    ) : (
-                      <MdKeyboardArrowRight className="w-6 h-6" />
-                    )}
-                  </li>
+                  <ul>
+                    <li
+                      className="sm:text-base flex items-center justify-between  mb-3 cursor-pointer text-[#4e5554] font-inter"
+                      onClick={() => {
+                        setdropDown1(!dropDown1);
+                        setdropDown2(false);
+                        setdropDown3(false);
+                        setdropDown4(false);
+                      }}
+                    >
+                      How to setup locally
+                      {dropDown1 ? (
+                        <IoIosArrowDown className="w-6 h-6" />
+                      ) : (
+                        <MdKeyboardArrowRight className="w-6 h-6" />
+                      )}
+                    </li>
+                  </ul>
                 )}
                 {index > 14 && index < 16 && (
-                  <li
-                    className="sm:text-[14px] flex items-center justify-between  mb-3 cursor-pointer text-[#4e5554] font-inter"
-                    onClick={() => {
-                      setdropDown1(false);
-                      setdropDown2(!dropDown2);
-                      setdropDown3(false);
-                      setdropDown4(false);
-                    }}
-                  >
-                    <span className="w-[90%] font-inter">
-                      How to setup/deploy for production
-                    </span>
-                    {dropDown2 ? (
-                      <IoIosArrowDown className="w-6 h-6" />
-                    ) : (
-                      <MdKeyboardArrowRight className="w-6 h-6" />
-                    )}
-                  </li>
+                  <ul>
+                    <li
+                      className="sm:text-[14px] flex items-center justify-between  mb-3 cursor-pointer text-[#4e5554] font-inter"
+                      onClick={() => {
+                        setdropDown1(false);
+                        setdropDown2(!dropDown2);
+                        setdropDown3(false);
+                        setdropDown4(false);
+                      }}
+                    >
+                      <span className="w-[90%] font-inter">
+                        How to setup/deploy for production
+                      </span>
+                      {dropDown2 ? (
+                        <IoIosArrowDown className="w-6 h-6" />
+                      ) : (
+                        <MdKeyboardArrowRight className="w-6 h-6" />
+                      )}
+                    </li>
+                  </ul>
                 )}
 
                 {index === 23 && (
-                  <li
-                    className="sm:text-[14px] flex items-center justify-between   mb-3 cursor-pointer text-[#4e5554] font-inter"
-                    onClick={() => {
-                      setdropDown1(false);
-                      setdropDown2(false);
-                      setdropDown3(!dropDown3);
-                      setdropDown4(false);
-                    }}
-                  >
-                    Sentry Dashboard
-                    {dropDown3 ? (
-                      <IoIosArrowDown className="w-6 h-6" />
-                    ) : (
-                      <MdKeyboardArrowRight className="w-6 h-6" />
-                    )}
-                  </li>
+                  <ul>
+                    <li
+                      className="sm:text-[14px] flex items-center justify-between   mb-3 cursor-pointer text-[#4e5554] font-inter"
+                      onClick={() => {
+                        setdropDown1(false);
+                        setdropDown2(false);
+                        setdropDown3(!dropDown3);
+                        setdropDown4(false);
+                      }}
+                    >
+                      Sentry Dashboard
+                      {dropDown3 ? (
+                        <IoIosArrowDown className="w-6 h-6" />
+                      ) : (
+                        <MdKeyboardArrowRight className="w-6 h-6" />
+                      )}
+                    </li>
+                  </ul>
                 )}
 
                 {index === 26 && (
-                  <li
-                    className="sm:text-[14px] flex items-center justify-between  mb-3 cursor-pointer text-[#4e5554] font-inter"
-                    onClick={() => {
-                      setdropDown1(false);
-                      setdropDown2(false);
-                      setdropDown3(false);
-                      setdropDown4(!dropDown4);
-                    }}
-                  >
-                    Amplitude Dashboard
-                    {dropDown4 ? (
-                      <IoIosArrowDown className="w-6 h-6" />
-                    ) : (
-                      <MdKeyboardArrowRight className="w-6 h-6" />
-                    )}
-                  </li>
+                  <ul>
+                    <li
+                      className="sm:text-[14px] flex items-center justify-between  mb-3 cursor-pointer text-[#4e5554] font-inter"
+                      onClick={() => {
+                        setdropDown1(false);
+                        setdropDown2(false);
+                        setdropDown3(false);
+                        setdropDown4(!dropDown4);
+                      }}
+                    >
+                      Amplitude Dashboard
+                      {dropDown4 ? (
+                        <IoIosArrowDown className="w-6 h-6" />
+                      ) : (
+                        <MdKeyboardArrowRight className="w-6 h-6" />
+                      )}
+                    </li>
+                  </ul>
                 )}
                 {dropDown1 && index > 6 && index < 15 && (
                   <NavLink

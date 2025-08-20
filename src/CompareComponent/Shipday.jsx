@@ -928,6 +928,7 @@ function Shipday() {
           </motion.div>
           <div className="sm:overflow-x-auto tablet:overflow-none mt-10 pb-10 bg-white w-full max-w-[1140px] mx-auto rounded-xl">
             <table className="mx-8 text-base">
+              <tbody>
               <tr className="uppercase ">
                 <th className="py-8 px-6 text-left sm:w-[250px] desktop:w-[400px] iox:w-[520px]  sm:text-base text-[#959595] font-semibold font-inter">
                   Features
@@ -1034,6 +1035,7 @@ function Shipday() {
                   Standard support package
                 </td>
               </tr>
+              </tbody>
             </table>
           </div>
         </div>

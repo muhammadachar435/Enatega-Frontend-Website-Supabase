@@ -42,7 +42,7 @@ function License() {
             <h1 className="font-inter text-[#1A1D1E] text-[24px] ml-0 my-4 font-bold ">
               Lifetime License
             </h1>
-            <ul class="list-disc font-[500] font-inter text-[#0C0C0C] text-[16px]  px-8 ml-0 ">
+            <ul className="list-disc font-[500] font-inter text-[#0C0C0C] text-[16px]  px-8 ml-0 ">
               <li>
                 There are no limitations on the number of iOS apps or Android
                 apps you can install.

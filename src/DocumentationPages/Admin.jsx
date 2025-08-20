@@ -16,7 +16,7 @@ function Admin() {
             How to Setup Admin Dashboard
           </h1>
 
-          <ul class="list-disc font-[500] my-2 font-inter text-[17px]  px-8  biglap:mx-0">
+          <ul className="list-disc font-[500] my-2 font-inter text-[17px]  px-8  biglap:mx-0">
             <li>Clone or download source code from GitHub</li>
 
             <li>

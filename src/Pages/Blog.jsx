@@ -4,9 +4,18 @@ import SidebarData from "../Component/Sidebardata";
 import { IoSearch } from "react-icons/io5";
 import { Articles } from "./Blogs";
 import { ToastContainer, toast } from "react-toastify";
-import {IoMdMenu,IoMdClose,IoIosArrowDown,IoIosArrowUp,} from "react-icons/io";
+import {
+  IoMdMenu,
+  IoMdClose,
+  IoIosArrowDown,
+  IoIosArrowUp,
+} from "react-icons/io";
 import "react-phone-input-2/lib/style.css";
-import { TiSocialFacebook, TiSocialLinkedin,TiArrowSortedDown } from "react-icons/ti";
+import {
+  TiSocialFacebook,
+  TiSocialLinkedin,
+  TiArrowSortedDown,
+} from "react-icons/ti";
 import { FaInstagram } from "react-icons/fa";
 
 // Blog
@@ -136,7 +145,7 @@ function Blog() {
               LIMITED TIME OFFER
             </span>
             <span className="text-white sm:text-[10px] tablet:text-sm tablet:font-bold desktop:text-2xl sm:px-1 font-sans font-semibold tablet:px-6">
-              OFFER VALID TILL{" "}   
+              OFFER VALID TILL{" "}
               <span className="text-[#7369b0] text-white-outline sm:text-[10px] sm:font-light tablet:text-sm tablet:font-bold  desktop:text-2xl font-sans desktop:font-extrabold ">
                 JULY
               </span>
@@ -1584,64 +1593,35 @@ function Blog() {
         <div className="tablet:grid tablet:grid-cols-2 desktop:grid-cols-3 biglap:grid-cols-5 tablet:w-[728px]  desktop:w-[964px] iox:w-[1160px] biglap:w-[2000px] mx-auto ">
           {filteredArticles.length > 0 ? (
             <>
-              {filteredArticles.map((item) => {
-                return (
-                  <>
-                    {item.id < 10 && (
-                      <div
-                        className="sm:w-[300px] sm:h-full sm:max-h-[420px] mymob:w-[335px] myiphone:w-[385px] tablet:w-[340px] tablet:h-full tablet:max-h-[400px] desktop:h-full desktop:max-h-[420px] desktop:w-[300px] iox:w-[358px] iox:h-full iox:max-h-[400px] biglap:w-[380px]  biglap:h-full biglap:max-h-[420px] border border-[#e4e4e4] rounded-2xl my-8 px-2 py-2  mx-auto"
-                        key={item.id}
+              {filteredArticles.map(
+                (item) =>
+                  (item.id < 10 || (Load && item.id > 9)) && (
+                    <div
+                      key={item.id}
+                      className="sm:w-[300px] sm:h-full sm:max-h-[420px] mymob:w-[335px] myiphone:w-[385px] tablet:w-[340px] tablet:h-full tablet:max-h-[400px] desktop:h-full desktop:max-h-[420px] desktop:w-[300px] iox:w-[358px] iox:h-full iox:max-h-[400px] biglap:w-[380px] biglap:h-full biglap:max-h-[420px] border border-[#e4e4e4] rounded-2xl my-8 px-2 py-2 mx-auto"
+                    >
+                      <img
+                        src={item.img}
+                        alt=""
+                        className="sm:h-[230px] mymob:w-[100%] rounded-lg "
+                      />
+                      <p className="text-[#14151799] mt-4 bg-[#D3DAE0] p-1 rounded-full text-xs sm:w-[40%] tablet:w-[33%] desktop:w-[40%] iox:w-full py-[6px] iox:max-w-[33%] iox:mx-1 text-center font-bold ">
+                        {item.Date}
+                      </p>
+                      <Link
+                        to="#"
+                        className="text-[19px] text-[#141517] font-inter font-semibold "
                       >
-                        <img
-                          src={item.img}
-                          alt=""
-                          className="sm:h-[230px] mymob:w-[100%] rounded-lg "
-                        />
-                        <p className="text-[#14151799] mt-4 bg-[#D3DAE0] p-1 rounded-full text-xs  sm:w-[40%] tablet:w-[33%] desktop:w-[40%] iox:w-full py-[6px] iox:max-w-[33%] iox:mx-1 text-center font-bold ">
-                          {item.Date}
+                        <p className="px-1 my-2 iox:mx-1 leading-6.5">
+                          {item.Title}
                         </p>
-                        <Link
-                          to="#"
-                          className="text-[19px] text-[#141517] font-inter  font-semibold "
-                        >
-                          <p className="px-1 my-2 iox:mx-1  leading-6.5">
-                            {item.Title}
-                          </p>
-                        </Link>
-                        <p className="text-[#14151799] text-[13px] font-semibold px-1 my-2 iox:my-4 iox:mx-1 ">
-                          {item.Publisher} - {item.Time}
-                        </p>
-                      </div>
-                    )}
-                    {Load && item.id > 9 && (
-                      <div
-                        className="sm:w-[300px] sm:h-full sm:max-h-[420px] mymob:w-[335px] myiphone:w-[385px] tablet:w-[340px] tablet:h-full tablet:max-h-[400px] desktop:h-full desktop:max-h-[420px] desktop:w-[300px] iox:w-[358px] iox:h-full iox:max-h-[400px] biglap:w-[380px]  biglap:h-full biglap:max-h-[420px] border border-[#e4e4e4] rounded-2xl my-8 px-2 py-2  mx-auto"
-                        key={item.id}
-                      >
-                        <img
-                          src={item.img}
-                          alt=""
-                          className="sm:h-[230px] mymob:w-[100%] rounded-lg "
-                        />
-                        <p className="text-[#14151799] mt-4 bg-[#D3DAE0] p-1 rounded-full text-xs  sm:w-[40%] tablet:w-[33%] desktop:w-[40%] iox:w-full py-[6px] iox:max-w-[33%] iox:mx-1 text-center font-bold ">
-                          {item.Date}
-                        </p>
-                        <Link
-                          to="#"
-                          className="text-[19px] text-[#141517] font-inter  font-semibold "
-                        >
-                          <p className="px-1 my-2 iox:mx-1  leading-6.5">
-                            {item.Title}
-                          </p>
-                        </Link>
-                        <p className="text-[#14151799] text-[13px] font-semibold px-1 my-2 iox:my-4 iox:mx-1 ">
-                          {item.Publisher} - {item.Time}
-                        </p>
-                      </div>
-                    )}{" "}
-                  </>
-                );
-              })}{" "}
+                      </Link>
+                      <p className="text-[#14151799] text-[13px] font-semibold px-1 my-2 iox:my-4 iox:mx-1 ">
+                        {item.Publisher} - {item.Time}
+                      </p>
+                    </div>
+                  )
+              )}{" "}
             </>
           ) : (
             <>

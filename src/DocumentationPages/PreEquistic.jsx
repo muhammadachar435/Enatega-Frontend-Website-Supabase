@@ -118,7 +118,7 @@ function PreEquistic() {
             <h1 className="sm:text-2xl capitalize font-bold text-[#1A1D1E] font-inter my-4">
               Pre-Installed Software
             </h1>
-            <ul class="list-disc font-[500] my-2 font-inter text-[17px] px-8  text-[#0C0C0C] ">
+            <ul className="list-disc font-[500] my-2 font-inter text-[17px] px-8  text-[#0C0C0C] ">
               <li>
                 Latest or Stable version of Node{" "}
                 <a

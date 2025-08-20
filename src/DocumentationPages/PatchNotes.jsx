@@ -484,7 +484,7 @@ function PatchNotes() {
             </h1>
           </section>
 
-          <ul class="list-disc font-[500] my-2 font-inter text-[16px] sm:w-[300px] px-8 mymob:w-[360px] myiphone:w-[400px]  tablet:w-[728px] desktop:w-[639px] biglap:w-[1000px] mx-auto  ">
+          <ul className="list-disc font-[500] my-2 font-inter text-[16px] sm:w-[300px] px-8 mymob:w-[360px] myiphone:w-[400px]  tablet:w-[728px] desktop:w-[639px] biglap:w-[1000px] mx-auto  ">
             <li>Added a web version of the App</li>
           </ul>
 
@@ -510,7 +510,7 @@ function PatchNotes() {
             </h1>
           </section>
 
-          <ul class="list-disc font-[500] my-2 font-inter text-[16px] sm:w-[300px] px-8 mymob:w-[360px] myiphone:w-[400px]  tablet:w-[728px] desktop:w-[639px] biglap:w-[1000px] mx-auto  ">
+          <ul className="list-disc font-[500] my-2 font-inter text-[16px] sm:w-[300px] px-8 mymob:w-[360px] myiphone:w-[400px]  tablet:w-[728px] desktop:w-[639px] biglap:w-[1000px] mx-auto  ">
             <li>Added rider tracking feature</li>
             <li>Added restaurant timings feature</li>
             <li>UI/UX improved</li>
